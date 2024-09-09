@@ -1,8 +1,12 @@
 
+import java.awt.Color;
 import java.awt.Font;
 
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 
 public class GeradorSenhaUI extends JFrame {
@@ -19,17 +23,30 @@ public class GeradorSenhaUI extends JFrame {
 		// Centraliza a interface
 		setLocationRelativeTo(null);
 
-		addUiComponents();
-
+		addTitulo();
+		addOutput();
 	}
 
-	private void addUiComponents() {
+	private void addTitulo() {
 		JLabel tituloLabel = new JLabel("Gerador de Senhas");
 		tituloLabel.setFont(new Font("Dialog", Font.BOLD, 18));
 		tituloLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		//Coordenadas x e y, largura e altura
-		tituloLabel.setBounds(0, 10, 540, 39);
+		// Coordenadas x e y, largura e altura
+		tituloLabel.setBounds(0, 10, 540, 40);
+
 		add(tituloLabel);
 	}
 
+	private void addOutput() {
+		JTextArea output = new JTextArea();
+		output.setEditable(false);
+		output.setFont(new Font("Dialog", Font.BOLD, 18));
+
+		JScrollPane outputPane = new JScrollPane(output);
+		outputPane.setBounds(25, 45, 480, 50);
+		outputPane.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+
+		add(outputPane);
+
+	}
 }
