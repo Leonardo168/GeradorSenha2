@@ -23,11 +23,10 @@ public class GeradorSenhaUI extends JFrame {
 		// Centraliza a interface
 		setLocationRelativeTo(null);
 
-		addTitulo();
-		addOutput();
+		addElementosUi();
 	}
 
-	private void addTitulo() {
+	private void addElementosUi() {
 		JLabel tituloLabel = new JLabel("Gerador de Senhas");
 		tituloLabel.setFont(new Font("Dialog", Font.BOLD, 18));
 		tituloLabel.setHorizontalAlignment(SwingConstants.CENTER);
@@ -35,18 +34,21 @@ public class GeradorSenhaUI extends JFrame {
 		tituloLabel.setBounds(0, 10, 540, 40);
 
 		add(tituloLabel);
-	}
-
-	private void addOutput() {
+		
 		JTextArea output = new JTextArea();
 		output.setEditable(false);
-		output.setFont(new Font("Dialog", Font.BOLD, 18));
+		output.setFont(new Font("Dialog", Font.PLAIN, 12));
 
 		JScrollPane outputPane = new JScrollPane(output);
-		outputPane.setBounds(25, 45, 480, 50);
+		outputPane.setBounds(25, 90, 480, 50);
 		outputPane.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 
 		add(outputPane);
-
+		
+		JLabel tamahoLabel = new JLabel("Tamanho da Senha:");
+		tamahoLabel.setFont(new Font("Dialog", Font.PLAIN, 12));
+		tamahoLabel.setBounds(25, 150, 272, 39);
+		
+		add(tamahoLabel);
 	}
 }
