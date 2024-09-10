@@ -11,6 +11,10 @@ import javax.swing.JTextArea;
 import javax.swing.JToggleButton;
 import javax.swing.SwingConstants;
 
+/**
+ * @author Leonardo Gomes da Silva
+ */
+
 public class GeradorSenhaUI extends JFrame {
 
 	public GeradorSenhaUI() {
@@ -73,10 +77,10 @@ public class GeradorSenhaUI extends JFrame {
 		numerosToggle.setBounds(25, 373, 230, 56);
 		add(numerosToggle);
 		
-		JToggleButton simbolosToggle = new JToggleButton("Símbolos");
-		simbolosToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
-		simbolosToggle.setBounds(277, 373, 230, 56);
-		add(simbolosToggle);
+		JToggleButton especiaisToggle = new JToggleButton("Especiais ");
+		especiaisToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
+		especiaisToggle.setBounds(277, 373, 230, 56);
+		add(especiaisToggle);
 		
 		JButton gerarButton = new JButton("Gerar");
 		gerarButton.setFont(new Font("Dialog", Font.PLAIN, 32));

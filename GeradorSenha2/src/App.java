@@ -1,3 +1,6 @@
+/**
+ * @author Leonardo Gomes da Silva
+ */
 
 public class App {
 
