@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Font;
 
 import javax.swing.BorderFactory;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
@@ -38,7 +39,7 @@ public class GeradorSenhaUI extends JFrame {
 		
 		JTextArea senhaOutput = new JTextArea();
 		senhaOutput.setEditable(false);
-		senhaOutput.setFont(new Font("Dialog", Font.PLAIN, 32));
+		senhaOutput.setFont(new Font("Dialog", Font.PLAIN, 22));
 		
 		JScrollPane outputPane = new JScrollPane(senhaOutput);
 		outputPane.setBounds(25, 77, 479, 120);
@@ -52,29 +53,34 @@ public class GeradorSenhaUI extends JFrame {
 		
 		JTextArea tamanhoInput = new JTextArea();
 		tamanhoInput.setFont(new Font("Dialog", Font.PLAIN, 32));
-		tamanhoInput.setBounds(310, 245, 192, 39);
+		tamanhoInput.setBounds(310, 245, 197, 39);
 		tamanhoInput.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		add(tamanhoInput);
 		
 		//Botões
 		JToggleButton maiusculasToggle = new JToggleButton("Maiúsculas");
 		maiusculasToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
-		maiusculasToggle.setBounds(25, 302, 225, 56);
+		maiusculasToggle.setBounds(25, 302, 230, 56);
 		add(maiusculasToggle);
 		
 		JToggleButton minusculasToggle = new JToggleButton("Minúsculas");
 		minusculasToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
-		minusculasToggle.setBounds(282, 302, 225, 56);
+		minusculasToggle.setBounds(277, 302, 230, 56);
 		add(minusculasToggle);
 		
 		JToggleButton numerosToggle = new JToggleButton("Números");
 		numerosToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
-		numerosToggle.setBounds(25, 373, 225, 56);
+		numerosToggle.setBounds(25, 373, 230, 56);
 		add(numerosToggle);
 		
 		JToggleButton simbolosToggle = new JToggleButton("Símbolos");
 		simbolosToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
-		simbolosToggle.setBounds(282, 373, 225, 56);
+		simbolosToggle.setBounds(277, 373, 230, 56);
 		add(simbolosToggle);
+		
+		JButton gerarButton = new JButton("Gerar");
+		gerarButton.setFont(new Font("Dialog", Font.PLAIN, 32));
+		gerarButton.setBounds(155, 462, 240, 56);
+		add(gerarButton);
 	}
 }
