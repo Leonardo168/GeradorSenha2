@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JToggleButton;
 import javax.swing.SwingConstants;
 
 public class GeradorSenhaUI extends JFrame {
@@ -50,5 +51,22 @@ public class GeradorSenhaUI extends JFrame {
 		tamahoLabel.setBounds(25, 150, 272, 39);
 		
 		add(tamahoLabel);
+		
+		//Botões
+		JToggleButton maiusculasToggle = new JToggleButton("Maiúsculas");
+		maiusculasToggle.setBounds(35, 200, 225, 56);
+		add(maiusculasToggle);
+		
+		JToggleButton minusculasToggle = new JToggleButton("Minúsculas");
+		minusculasToggle.setBounds(272, 200, 225, 56);
+		add(minusculasToggle);
+		
+		JToggleButton numerosToggle = new JToggleButton("Números");
+		numerosToggle.setBounds(35, 270, 225, 56);
+		add(numerosToggle);
+		
+		JToggleButton simbolosToggle = new JToggleButton("Símbolos");
+		simbolosToggle.setBounds(272, 270, 225, 56);
+		add(simbolosToggle);
 	}
 }
