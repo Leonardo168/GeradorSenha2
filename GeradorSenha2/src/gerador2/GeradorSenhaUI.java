@@ -37,13 +37,12 @@ public class GeradorSenhaUI extends JFrame {
 		// Centraliza a interface
 		setLocationRelativeTo(null);
 		
-		getContentPane().setBackground(Color.BLACK);
-		
-
-		geradorSenha = new GeradorSenha();
-
 		Color cor1 = Color.decode("#000000");
 		Color cor2 = Color.decode("#33ff00");
+		
+		getContentPane().setBackground(cor1);
+		
+		geradorSenha = new GeradorSenha();
 		
 		addElementosUi(cor1, cor2);
 	}
