@@ -1,3 +1,4 @@
+package gerador2;
 /**
  * @author Leonardo Gomes da Silva
  */

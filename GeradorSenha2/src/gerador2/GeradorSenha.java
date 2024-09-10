@@ -1,3 +1,4 @@
+package gerador2;
 import java.util.Random;
 
 /**
