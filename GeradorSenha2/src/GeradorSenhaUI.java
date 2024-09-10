@@ -29,44 +29,52 @@ public class GeradorSenhaUI extends JFrame {
 
 	private void addElementosUi() {
 		JLabel tituloLabel = new JLabel("Gerador de Senhas");
-		tituloLabel.setFont(new Font("Dialog", Font.BOLD, 18));
+		tituloLabel.setFont(new Font("Dialog", Font.BOLD, 32));
 		tituloLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		// Coordenadas x e y, largura e altura
-		tituloLabel.setBounds(0, 10, 540, 40);
-
+		tituloLabel.setBounds(0, 10, 540, 39);
 		add(tituloLabel);
 		
-		JTextArea output = new JTextArea();
-		output.setEditable(false);
-		output.setFont(new Font("Dialog", Font.PLAIN, 12));
-
-		JScrollPane outputPane = new JScrollPane(output);
-		outputPane.setBounds(25, 90, 480, 50);
+		
+		JTextArea senhaOutput = new JTextArea();
+		senhaOutput.setEditable(false);
+		senhaOutput.setFont(new Font("Dialog", Font.PLAIN, 32));
+		
+		JScrollPane outputPane = new JScrollPane(senhaOutput);
+		outputPane.setBounds(25, 77, 479, 120);
 		outputPane.setBorder(BorderFactory.createLineBorder(Color.BLACK));
-
 		add(outputPane);
 		
-		JLabel tamahoLabel = new JLabel("Tamanho da Senha:");
-		tamahoLabel.setFont(new Font("Dialog", Font.PLAIN, 12));
-		tamahoLabel.setBounds(25, 150, 272, 39);
+		JLabel tamanhoLabel = new JLabel("Tamanho da Senha:");
+		tamanhoLabel.setFont(new Font("Dialog", Font.PLAIN, 32));
+		tamanhoLabel.setBounds(25, 245, 302, 39);
+		add(tamanhoLabel);
 		
-		add(tamahoLabel);
+		JTextArea tamanhoInput = new JTextArea();
+		tamanhoInput.setFont(new Font("Dialog", Font.PLAIN, 32));
+		tamanhoInput.setBounds(310, 245, 192, 39);
+		tamanhoInput.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		add(tamanhoInput);
 		
 		//Botões
 		JToggleButton maiusculasToggle = new JToggleButton("Maiúsculas");
-		maiusculasToggle.setBounds(35, 200, 225, 56);
+		maiusculasToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
+		maiusculasToggle.setBounds(25, 302, 225, 56);
 		add(maiusculasToggle);
 		
 		JToggleButton minusculasToggle = new JToggleButton("Minúsculas");
-		minusculasToggle.setBounds(272, 200, 225, 56);
+		minusculasToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
+		minusculasToggle.setBounds(282, 302, 225, 56);
 		add(minusculasToggle);
 		
 		JToggleButton numerosToggle = new JToggleButton("Números");
-		numerosToggle.setBounds(35, 270, 225, 56);
+		numerosToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
+		numerosToggle.setBounds(25, 373, 225, 56);
 		add(numerosToggle);
 		
 		JToggleButton simbolosToggle = new JToggleButton("Símbolos");
-		simbolosToggle.setBounds(272, 270, 225, 56);
+		simbolosToggle.setFont(new Font("Dialog", Font.PLAIN, 26));
+		simbolosToggle.setBounds(282, 373, 225, 56);
 		add(simbolosToggle);
 	}
 }
