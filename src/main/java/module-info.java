@@ -4,6 +4,6 @@ module com.geradorsenha2.temp {
     requires java.desktop;
 
 
-    opens com.geradorsenha2.temp to javafx.fxml;
-    exports com.geradorsenha2.temp;
+    opens com.geradorsenha2.geradorsenha2 to javafx.fxml;
+    exports com.geradorsenha2.geradorsenha2;
 }
